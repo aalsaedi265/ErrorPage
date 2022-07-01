@@ -10,11 +10,11 @@ function topBar(){
 
 <Navbar bg="light" expand="sm">
   <Container>
-    <Navbar.Brand href="#home">Got Problems Write About it like the rest of them </Navbar.Brand>
+    <Navbar.Brand href="#home">Got Problems Write About it like the rest of them |</Navbar.Brand>
 
     <Navbar.Brand href="#home">Our Issue</Navbar.Brand>
     
-    <Navbar.Brand href="#link">Common Issures </Navbar.Brand>
+    <Navbar.Brand href="#link">| Common Issures </Navbar.Brand>
     <Navbar.Collapse id="basic-navbar-nav">
       <Nav className="me-auto">
 
