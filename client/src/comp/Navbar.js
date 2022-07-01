@@ -1,5 +1,6 @@
 
 import React from 'react';
+import {Link} from 'react-router-dom'
 import {Navbar, Container,Nav,NavDropdown} from 'react-bootstrap'
 
 function topBar(){
@@ -10,7 +11,10 @@ function topBar(){
 
 <Navbar bg="light" expand="sm">
   <Container>
-    <Navbar.Brand href="#home">Got Problems Write About it like the rest of them |</Navbar.Brand>
+
+  {/* <Button  color="inherit">  <Link to="/massage"> Massage </Link>  </Button> */}
+
+    <Navbar.Brand  > <Link to ="/" style={{textDecoration: 'none'}} > Got Problems Write About it like the rest of them | </Link> </Navbar.Brand>
 
     <Navbar.Brand href="#home">Our Issue</Navbar.Brand>
     

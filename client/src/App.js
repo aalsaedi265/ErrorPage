@@ -18,7 +18,7 @@ function App() {
 
     <Routes>
 
-    <Route exact path="/" element={ <Credientals/>} />
+    {/* <Route exact path="/" element={ <Credientals/>} /> */}
 
     <Route exact path='/ourIssue' element={ <OurIssue/>}/>
 
