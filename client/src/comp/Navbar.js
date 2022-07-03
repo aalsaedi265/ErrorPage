@@ -12,25 +12,26 @@ function topBar(){
 <Navbar bg="light" expand="sm">
   <Container>
 
-  {/* <Button  color="inherit">  <Link to="/massage"> Massage </Link>  </Button> */}
+  {/*'/ourIssue' */}
 
     <Navbar.Brand  > <Link to ="/" style={{textDecoration: 'none'}} > Got Problems Write About it like the rest of them | </Link> </Navbar.Brand>
 
-    <Navbar.Brand href="#home">Our Issue</Navbar.Brand>
+    <Navbar.Brand> <Link to ='/ourIssue' style={{textDecoration: 'none'}} > Our Issue </Link> </Navbar.Brand>
     
-    <Navbar.Brand href="#link">| Common Issures </Navbar.Brand>
-    <Navbar.Collapse id="basic-navbar-nav">
-      <Nav className="me-auto">
-
-       
-        <NavDropdown title="Dropdown" id="basic-nav-dropdown">
-          <NavDropdown.Item href="#action/3.1">Login</NavDropdown.Item>
+    <Navbar.Brand> <Link to ='/Common' style={{textDecoration: 'none'}} >| Common Issures |</Link> </Navbar.Brand>
+    
+    <Navbar.Brand  >
+   
+      <Nav className="me-auto" >
+        <NavDropdown title="Dropdown" id="basic-nav-dropdown" > 
+          <NavDropdown.Item><Link to ='/Common' style={{textDecoration: 'none'}} >LogIn|</Link> </NavDropdown.Item>
           <NavDropdown.Divider />
-          <NavDropdown.Item href="#action/3.2">LogOut</NavDropdown.Item>
+          <NavDropdown.Item> <Link to ='/Common' style={{textDecoration: 'none'}} >LogOut </Link></NavDropdown.Item>
            
         </NavDropdown>
+      
       </Nav>
-    </Navbar.Collapse>
+      </Navbar.Brand>
   </Container>
 </Navbar>
 

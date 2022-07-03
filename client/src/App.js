@@ -1,5 +1,4 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 import NavBar from './comp/Navbar'
 import {Route,Routes} from "react-router-dom"
@@ -18,7 +17,7 @@ function App() {
 
     <Routes>
 
-    {/* <Route exact path="/" element={ <Credientals/>} /> */}
+    <Route exact path="/" element={ <Credientals/>} />
 
     <Route exact path='/ourIssue' element={ <OurIssue/>}/>
 
@@ -26,16 +25,6 @@ function App() {
 
     </Routes>
 
-      <header className="App-header">
-
-      
-        <img src={logo} className="App-logo" alt="logo" />
-       
-      </header>
-
-      
-
-    
 
     </div>
   );
