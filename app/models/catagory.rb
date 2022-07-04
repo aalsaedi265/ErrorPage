@@ -1,5 +1,5 @@
 class Catagory < ApplicationRecord
 
-    belongs_to :user
-    belongs_to :issue
+  has_many :issues
+  has_many :users, through: :issues
 end
