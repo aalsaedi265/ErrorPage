@@ -6,13 +6,17 @@ class UsersController < ApplicationController
     end
 
     def show 
-        render json: User.find(params[:id])
+        render json: User.find(params[:id]), except: except
     end
 
     private
 
     def user_params
 
+    end
+    
+    def except
+         [:created_at, :updated_at]
     end
 
 end
