@@ -1,2 +1,16 @@
 class ApplicationController < ActionController::Base
+    
+    rescue_from ActiveRecord::RecordNotFound, with: :record_not_found
+    rescue_from ActiveRecord::RecordInvalid, with: :record_invalid
+
+    private
+
+    def record_not_found(x)
+        render json: {error: "The Item, #{x} Not Found"}, status: 404
+    end
+
+    def record_invalid(x)
+        render json: {errors: x.record.errors.full_messages}, status: 422
+    end
+
 end

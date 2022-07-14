@@ -7,9 +7,9 @@ Issue.destroy_all
 
 puts 'forge user'
 
-q = User.create(name:'Glen Qagmire')
-c = User.create(name: 'Charlie Sheen')
-s = User.create(name: 'Solider Boy')
+q = User.create(name:'Glen Qagmire') #the fun loving piolt
+c = User.create(name: 'Charlie Sheen')#the man of two and half man
+s = User.create(name: 'Solider Boy') #hero of heros
 
 puts 'forge catagory'
 
