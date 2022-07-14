@@ -6,7 +6,7 @@ class ApplicationController < ActionController::Base
     private
 
     def record_not_found(x)
-        render json: {error: "The Item, #{x} Not Found"}, status: 404
+        render json: {error: "#{x}"}, status: 404
     end
 
     def record_invalid(x)
