@@ -5,6 +5,10 @@ class ApplicationController < ActionController::Base
 
     private
 
+    def except
+        [:created_at, :updated_at]
+   end
+
     def record_not_found(x)
         render json: {error: "#{x}"}, status: 404
     end
