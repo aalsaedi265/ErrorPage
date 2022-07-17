@@ -6,7 +6,7 @@ export default function OurIssue(){
 
     return (
 
-        <>
+        <div id="issue">
         <Card 
         
 
@@ -15,11 +15,11 @@ export default function OurIssue(){
                 backgroundColor: 'black',
                 color: 'white'}}>
             <Card.Body>
-                <Card.Title>  Card Title</Card.Title>
+                <Card.Title> Issue Tiele </Card.Title>
                 <Card.Subtitle className="mb-2 text-muted"
                 style ={{color: 'white'}}>
                 
-                Card Subtitle</Card.Subtitle>
+                by userName</Card.Subtitle>
                     <Card.Text>
                     Some quick example text to build on the card title and make up the bulk of
                     the card's content.
@@ -27,6 +27,6 @@ export default function OurIssue(){
                
             </Card.Body>
         </Card>
-        </>
+        </div>
     )
 }

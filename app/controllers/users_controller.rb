@@ -9,8 +9,19 @@ class UsersController < ApplicationController
         render json: User.find(params[:id]), except: except
     end
 
+    def show
+        user = user.find(session[:user_id])
+        render json: user
+    end
+
     def create
-       render json: User.create!(user_params), status: 201
+        render json: User.create!(user_params), except: except, status: 201
+    end
+
+    def create
+       user = User.create!(user_params)
+       session[:user_id] = user.id
+       render json: user, status: 201
     end
 
     private

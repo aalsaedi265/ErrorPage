@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   # root "articles#index"
   resources :catagories, only: [:index, :show,]
   resources :issue, only: [:index, :show, :create, :update, :destroy] 
-  resources :users, only: [:index, :show, :create]
+  resources :users, only: [:index,:show,:create]
 
 
   post "/signup", to: 'users#create'
