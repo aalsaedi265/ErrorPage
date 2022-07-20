@@ -1,8 +1,19 @@
 
-import React from 'react';
+import React,{useState} from 'react';
 import logo from '../logo.svg';
 
-export default function Credientals(){
+export default function Credientals({user,logIn}){
+
+    const [name, setName] = useState('')
+    const [num, setNum] =useState(null)
+    const [errName, setErrName] = useState('')
+    const [errNum, errSetNum] = useState('')
+
+    function submit(send)
+    {
+        send.preventDefault()
+        
+    }
 
     return (
 
@@ -11,10 +22,10 @@ export default function Credientals(){
                 <form>
 
                     <p>Number</p>
-                    <input type='integer'name='id'/>
+                    <input style={{color:'black'}} type='integer'name='id'/>
                     <br></br>
                     <p>Name</p>
-                    <input type='text' name='name'/>
+                    <input style={{color:'black'}} type='text' name='name'/>
                     <br></br>
                    
                     <input style={{color:'black'}} type='button' value='submit'/>

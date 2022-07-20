@@ -3,8 +3,14 @@ import React from 'react';
 import {Link} from 'react-router-dom'
 import {Navbar, Container,Nav,NavDropdown} from 'react-bootstrap'
 
-function topBar(){
+function topBar({user,logOut}){
 
+function exit()
+{
+  fetch('/logout',{
+    method: 'DELETE'
+  }).then( () => logOut() )
+}
 
     return(
       <div>

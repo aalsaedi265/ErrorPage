@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useState,useEffect} from 'react';
 import './App.css';
 import NavBar from './comp/Navbar'
 import {Route,Routes} from "react-router-dom"
@@ -8,16 +8,37 @@ import Credientals from './comp/Credientals'
 
 
 
-function App() {
+function App() 
+{
+  const [user, setUser] = useState(null)
+
+  useEffect( () => {
+    fetch('/me').then( res =>{
+      if ( res.okl)
+      {
+        res.json().then(data => setUser(data) )
+      }
+    })
+  },[])
+
+  function login(client)
+  {
+    setUser(client)
+  }
+  function logOut()
+  {
+    setUser(null)
+  }
+
   return (
 
     <div className="App">
 
-    <NavBar/>
+    <NavBar user={user} logOut={logOut}/>
 
     <Routes>
 
-    <Route exact path="/" element={ <Credientals/>} />
+    <Route exact path="/" element={ <Credientals user={user} logIn={login} /> } />
 
     <Route exact path='/ourIssue' element={ <OurIssue/>}/>
 
