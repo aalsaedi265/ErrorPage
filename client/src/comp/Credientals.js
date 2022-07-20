@@ -7,12 +7,31 @@ export default function Credientals({user,logIn}){
     const [name, setName] = useState('')
     const [num, setNum] =useState(null)
     const [errName, setErrName] = useState('')
-    const [errNum, errSetNum] = useState('')
+    const [errNum, setErrNum] = useState('')
+    const [load,setLoad] = useState(false)
 
     function submit(send)
     {
         send.preventDefault()
-        
+        setLoad(true)
+
+        fetch('/login',{
+           method: 'POST',
+           headers: {"Content -Type" : "application/json"},
+           body : JSON.stringify({name,num})
+        })
+        .then( res => {
+            setLoad(false)
+            if(res.ok)
+            {
+                res.json().then(data => logIn(data) )
+            }else{
+                res.json().catch( err =>{
+                    setErrName('wrong name')
+                    setErrNum('wrong number')
+                })
+            }
+        })
     }
 
     return (
