@@ -32,24 +32,35 @@ export default function Credientals({user,logIn}){
                 })
             }
         })
+
+        
     }
 
     return (
 
         <>
             <header className="App-header">
-                <form>
+                <form onSubmit={submit}>
 
                     <p>Number</p>
-                    <input style={{color:'black'}} type='integer'name='id'/>
+                    <input placeholder="ID" style={{color:'black'}} type='number'name='id'
+                    required
+                    value={num}
+                    onChange={e => setNum(e.target.value) }
+                    />
                     <br></br>
                     <p>Name</p>
-                    <input style={{color:'black'}} type='text' name='name'/>
+                    <input style={{color:'black'}} type='text' name='name'
+                    required
+                    value={name}
+                    onChange={e => setName(e.target.value)}
+                    />
                     <br></br>
                    
                     <input style={{color:'black'}} type='button' value='submit'/>
                 </form>
-      
+
+                {user? <p>loged in move on to CSs</p> : <p>not yet</p>}
             <img src={logo} className="App-logo" alt="logo" />
 
             </header>
