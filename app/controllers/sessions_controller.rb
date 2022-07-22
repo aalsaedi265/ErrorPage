@@ -5,6 +5,7 @@ class SessionsController < ApplicationController
         if user&authenticate(params[:name])
             session[:user_id] =user.id
             render json: user
+            byebug
         else
             render json:{errors: ['Invalid credentails try again']}, status: 401
          end

@@ -5,15 +5,18 @@ import logo from '../logo.svg';
 export default function Credientals({user,logIn}){
 
     const [name, setName] = useState('')
-    const [num, setNum] =useState(null)
+    const [num, setNum] =useState(0)
     const [errName, setErrName] = useState('')
     const [errNum, setErrNum] = useState('')
     const [load,setLoad] = useState(false)
 
     function submit(send)
     {
+        console.log('button has been clicked')
         send.preventDefault()
         setLoad(true)
+
+        
 
         fetch('/login',{
            method: 'POST',
@@ -58,6 +61,7 @@ export default function Credientals({user,logIn}){
                     <br></br>
                    
                     <input style={{color:'black'}} type='button' value='submit'/>
+                   
                 </form>
 
                 {user? <p>loged in move on to CSs</p> : <p>not yet</p>}
