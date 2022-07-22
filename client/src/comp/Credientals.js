@@ -60,7 +60,7 @@ export default function Credientals({user,logIn}){
                     />
                     <br></br>
                    
-                    <input style={{color:'black'}} type='button' value='submit'/>
+                    <button style={{color:'black'}} type='submit' value='submit'/>
                    
                 </form>
 
