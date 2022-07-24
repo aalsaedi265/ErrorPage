@@ -10,11 +10,11 @@ import Credientals from './comp/Credientals'
 
 function App() 
 {
-  const [user, setUser] = useState(null)
+  const [user, setUser] = useState('')
 
   useEffect( () => {
     fetch('/me').then( res =>{
-      if ( res.okl)
+      if ( res.ok)
       {
         res.json().then(data => setUser(data) )
       }

@@ -12,7 +12,7 @@ export default function Credientals({user,logIn}){
 
     function submit(send)
     {
-        console.log('button has been clicked')
+        
         send.preventDefault()
         setLoad(true)
 
@@ -20,7 +20,7 @@ export default function Credientals({user,logIn}){
 
         fetch('/login',{
            method: 'POST',
-           headers: {"Content -Type" : "application/json"},
+           headers: {"Content-Type" : "application/json"},
            body : JSON.stringify({name,num})
         })
         .then( res => {
@@ -35,7 +35,7 @@ export default function Credientals({user,logIn}){
                 })
             }
         })
-
+        console.log('button has been clicked')
         
     }
 
@@ -46,7 +46,7 @@ export default function Credientals({user,logIn}){
                 <form onSubmit={submit}>
 
                     <p>Number</p>
-                    <input placeholder="ID" style={{color:'black'}} type='number'name='id'
+                    <input placeholder="ID" style={{color:'black'}} type='number'name='num'
                     required
                     value={num}
                     onChange={e => setNum(e.target.value) }
